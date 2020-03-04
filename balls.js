@@ -109,7 +109,7 @@ function add_ball() {
 function draw() {
   background(0);
   if ((second() + (millis()/1000)) >= next_spawn && (balls.length < max_balls)) { add_ball(); }
-  fill(255, 255, 255, opacity);
+  fill(255);
   rect(0, windowHeight-floor, windowWidth, floor);
   
   for (i = 0; i < balls.length; i++) {
