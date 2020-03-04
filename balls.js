@@ -92,7 +92,7 @@ function setup() {
   framerate = 60;
   frameRate(framerate);
   noStroke();
-  max_balls = random(0, 500);
+  max_balls = random(1, 500);
   opacity = constrain(16/max_balls*255, 128, 255);
   mouseX = windowWidth/2;
   mouseY = windowHeight/2;
