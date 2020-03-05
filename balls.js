@@ -89,8 +89,8 @@ function mouseReleased() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   floor = windowHeight / 10;
-  framerate = 60;
   frameRate(framerate);
+  colorMode(HSB, 255);
   noStroke();
   max_balls = random(1, 500);
   opacity = constrain(16/max_balls*255, 128, 255);
@@ -100,7 +100,7 @@ function setup() {
 }
 
 function add_ball() {
-  var ball_color = color(random(255), random(255), random(255), opacity);
+  var ball_color = color(random(255), 255, 255, opacity);
   ball = new Ball(abs(random_bell()*50+windowWidth/50), random(0.5, 0.95), ball_color);
   balls.push(ball);
   next_spawn = (second() + (millis()/1000) + interval) % 60;
