@@ -23,7 +23,7 @@ class Ball {
     var to = mouse.copy().sub(this.location);
     var distance = to.mag();
     if (distance <= 300) {
-      stroke(red(this.ball_color), green(this.ball_color), blue(this.ball_color), mouse_held ? 128 : 25);
+      stroke(hue(this.ball_color), saturation(this.ball_color), brightness(this.ball_color), mouse_held ? 128 : 25);
       strokeWeight(mouse_held ? 5 : 2);
       line(this.location.x, this.location.y, mouse.x, mouse.y);
       noStroke();
